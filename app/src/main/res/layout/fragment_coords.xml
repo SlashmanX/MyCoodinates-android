@@ -23,8 +23,7 @@
             <TextView
                 style="@style/Label"
                 android:text="@string/latitude"
-                android:id="@+id/latitude_label"
-                android:layout_marginBottom="15dp" />
+                android:id="@+id/latitude_label" />
 
             <TextView
                 style="@style/Value"
@@ -48,6 +47,21 @@
                 android:layout_below="@+id/latitude_value"
                 android:layout_toEndOf="@+id/longitude_label"
                 android:layout_alignBaseline="@+id/longitude_label"/>
+
+            <TextView
+                style="@style/Label"
+                android:text="@string/accuracy"
+                android:layout_below="@+id/longitude_label"
+                android:id="@+id/accuracy_label"
+                android:layout_marginBottom="0dp"/>
+
+            <TextView
+                style="@style/Value"
+                android:text=""
+                android:id="@+id/accuracy_value"
+                android:layout_below="@+id/longitude_value"
+                android:layout_toEndOf="@+id/accuracy_label"
+                android:layout_alignBaseline="@+id/accuracy_label"/>
         </RelativeLayout>
 
     </android.support.v7.widget.CardView>

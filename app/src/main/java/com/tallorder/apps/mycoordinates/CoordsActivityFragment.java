@@ -18,6 +18,7 @@ public class CoordsActivityFragment extends Fragment {
 
     TextView longitudeText;
     TextView latitudeText;
+    TextView accuracyText;
     OnLocationUpdatedListener mCallback;
 
     public CoordsActivityFragment() {
@@ -29,6 +30,7 @@ public class CoordsActivityFragment extends Fragment {
 
         longitudeText = (TextView) getView().findViewById(R.id.longitude_value);
         latitudeText = (TextView) getView().findViewById(R.id.latitude_value);
+        accuracyText = (TextView) getView().findViewById(R.id.accuracy_value);
     }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,5 +41,6 @@ public class CoordsActivityFragment extends Fragment {
     public void setLocation(Location location) {
         longitudeText.setText(location.getLongitude() + "");
         latitudeText.setText(location.getLatitude() + "");
+        accuracyText.setText(location.getAccuracy() + "m");
     }
 }
